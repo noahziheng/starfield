@@ -50,6 +50,39 @@ body {
     animation: fadeInOut 4s ease-in-out infinite;
 }
 
+/* 移动端响应式样式 */
+@media (max-width: 768px) {
+    .overlay h1 {
+        font-size: 2rem;
+        letter-spacing: 0.3rem;
+    }
+    
+    .overlay p {
+        font-size: 0.875rem;
+        letter-spacing: 0.15rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+    }
+    
+    .overlay p {
+        font-size: 0.75rem;
+        letter-spacing: 0.1rem;
+    }
+}
+
+/* 触摸设备优化 - 禁用悬停效果的闪烁 */
+@media (hover: none) and (pointer: coarse) {
+    .overlay {
+        opacity: 0.9;
+    }
+}
+
 @keyframes glow {
     from {
         text-shadow: 0 0 20px rgba(100, 150, 255, 0.5),
